@@ -7,7 +7,7 @@ String nome = 1213.0;
 nome.substring(0,nome.length()-2)
 //Saída 1213
 ~~~
-## Criar Enums a partir da descrição
+### Criar Enums a partir da descrição
 ~~~java
 @Getter
 @AllArgsConstructor
@@ -28,7 +28,7 @@ public enum EdificioEnum {
 }
 ~~~
 # SQL
-## Procurar campos com valor  
+### Procurar campos com valor  
 -- Crie a função a seguir
 ~~~sql
 CREATE OR REPLACE FUNCTION search_columns(
