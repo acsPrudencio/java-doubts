@@ -72,3 +72,9 @@ $$ language plpgsql;
 -- Chame a função em outra aba, passando o campo que deseja procurar
 select * from search_columns('String a ser procurada')
 ~~~
+
+~~~sql
+-- Dropa a coluna disponibilidade da tabela esporte
+ALTER TABLE esporte DROP COLUMN  disponibilidade;
+
+~~~
