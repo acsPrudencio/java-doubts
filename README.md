@@ -1,5 +1,5 @@
-# Dúvidas em java e como resolve-las
-Backup de resolução de dúvidas/dicas
+# Backup de resolução de dúvidas/dicas
+
 
 ~~~java
 // Remover dois ultimos números de uma string
