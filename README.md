@@ -1,25 +1,19 @@
 # Dúvidas em java e como resolve-las
-Repositório criado para funcionar como backup de resolução de dúvidas/dicas
+Backup de resolução de dúvidas/dicas
 
-Remover virgula/ponto e zeros desnecessários de uma string com regex
-
-String numeroContrato = "123.0";
-String novaString = numeroContrato.replace("/(^0+(?=\\d))|(.?0+$)/g","");
-//Saida 123
-
-
-Remover dois ultimos numeros de uma string
+~~~java
+// Remover dois ultimos números de uma string
 String nome = 1213.0;
 nome.substring(0,nome.length()-2)
-//Saida 1213
-
-#Criar Enums a partir da descrição
-
+//Saída 1213
+~~~
+## Criar Enums a partir da descrição
+~~~java
 @Getter
 @AllArgsConstructor
 public enum EdificioEnum {
 	CASA("Casa"),
-  CASA_Esquina("Casa de esquina"),
+  	CASA_Esquina("Casa de esquina"),
 	APARTAMENTO("Apartamento");
 	
 	private String descricao;
@@ -32,11 +26,11 @@ public enum EdificioEnum {
 		throw new ValidationException(TIPO_EDIFICIO_INVALIDO);
 	}
 }
-
-## SQL
-Procurar campos com valor
-// Criar a função
-
+~~~
+# SQL
+## Procurar campos com valor  
+-- Crie a função a seguir
+~~~sql
 CREATE OR REPLACE FUNCTION search_columns(
     needle text,
     haystack_tables name[] default '{}',
@@ -75,5 +69,6 @@ begin
 END;
 $$ language plpgsql;
 
-chamar a função 
+-- Chame a função em outra aba, passando o campo que deseja procurar
 select * from search_columns('String a ser procurada')
+~~~
