@@ -78,3 +78,9 @@ select * from search_columns('String a ser procurada')
 ALTER TABLE esporte DROP COLUMN  disponibilidade;
 
 ~~~
+
+~~~sql
+-- Atualiza coluna em uma tabela
+update tabela set coluna = 'novo valor' where coluna = 'valor antigo';
+
+~~~
