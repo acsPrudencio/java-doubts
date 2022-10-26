@@ -84,3 +84,12 @@ ALTER TABLE esporte DROP COLUMN  disponibilidade;
 update tabela set coluna = 'novo valor' where coluna = 'valor antigo';
 
 ~~~
+
+~~~java
+// Pesquisar dentro de entidades compostas
+    private static<T> Specification<T> pesquisarComLikeNumeroContrato(String nomeColuna,Object value ){
+        return (root, query, builder) ->{
+            return builder.like(builder.lower(root.get("numeroContrato").get(nomeColuna).get(nomeColuna)), "%" + value.toString() + "%");
+        };
+    }
+~~~
