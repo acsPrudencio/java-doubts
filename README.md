@@ -11,20 +11,21 @@ nome.substring(0,nome.length()-2)
 ~~~java
 @Getter
 @AllArgsConstructor
-public enum EdificioEnum {
-	CASA("Casa"),
-  	CASA_Esquina("Casa de esquina"),
-	APARTAMENTO("Apartamento");
-	
-	private String descricao;
+public enum TipoEdificioEnum {
 
-	public static EdificioEnum valueOfDescricao(String descricao){
-		for(EdificioEnum ts : values()){
-			if(ts.getDescricao().equalsIgnoreCase(descricao))
-				return ts;
-		}
-		throw new ValidationException(TIPO_EDIFICIO_INVALIDO);
-	}
+    CASA("Casa"),
+    APARTAMENTO("Apartamento");
+
+    private String descricao;
+
+    public static TipoEdificioEnum valueOfDescricao(String descricao) throws ValidationException {
+        for(TipoEdificioEnum ts : values()){
+            if(ts.getDescricao().equalsIgnoreCase(descricao))
+                return ts;
+        }
+        throw new ValidationException("Valor invalido para o campo Tipo de edificio");
+    }
+
 }
 ~~~
 # SQL
