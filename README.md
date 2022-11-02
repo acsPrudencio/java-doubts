@@ -93,10 +93,12 @@ update tabela set coluna = 'novo valor' where coluna = 'valor antigo';
         };
     }
 ~~~
-
-~~~Regex
-// Validar String apenas com letras A-Z
+# Regex
+## Validar String com apenas letras A-Z
+~~~java
 nome.matches("^([a-zA-Z]+\s)*[a-zA-Z]+$")
-// Validar String apenas com números
+~~~
+## Validar String com apenas números
+~~~java
 nome.matches("^\\d+$")
 ~~~
