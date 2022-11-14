@@ -94,6 +94,13 @@ update tabela set coluna = 'novo valor' where coluna = 'valor antigo';
         };
     }
 ~~~
+
+### Pesquisar
+~~~java
+// Pesquisar dentro de uma lista com criteria
+Predicate codigo = root.join("nomeDaLista").get("outraEntidade").get("nomeCampo").in(parametroDesejado);
+~~~
+
 # Regex
 ## Validar String com apenas letras A-Z
 ~~~java
