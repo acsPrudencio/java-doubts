@@ -110,3 +110,8 @@ nome.matches("^([a-zA-Z]+\s)*[a-zA-Z]+$")
 ~~~java
 nome.matches("^\\d+$")
 ~~~
+
+~~~ JAVA
+// Iginorar campos na integracao com outra api
+@JsonIgnoreProperties(ignoreUnknown = true)
+~~~
