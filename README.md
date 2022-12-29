@@ -86,6 +86,11 @@ update tabela set coluna = 'novo valor' where coluna = 'valor antigo';
 
 ~~~
 
+~~~
+-- Apagar registro de uma tabela
+DELETE FROM documento WHERE uuid = 'ac78926d-043d-42c1-8aed-4628f76e2b61'
+~~~
+
 ~~~java
 // Pesquisar dentro de entidades compostas
     private static<T> Specification<T> pesquisarComLikeNumeroContrato(String nomeColuna,Object value ){
